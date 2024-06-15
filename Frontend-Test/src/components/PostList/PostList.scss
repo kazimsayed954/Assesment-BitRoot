@@ -1,0 +1,19 @@
+/* src/components/PostList/PostList.scss */
+.post-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap as needed */
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .post-wrapper {
+    flex: 1 1 calc(40% - 70px); /* 2 columns */
+  }
+  
+  @media (max-width: 768px) {
+    .post-wrapper {
+      flex: 1 1 100%; /* Single column on smaller screens */
+    }
+  }
+  

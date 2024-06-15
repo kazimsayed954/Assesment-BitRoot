@@ -1,0 +1,16 @@
+
+
+.app-container {
+  display: flex;
+  flex-direction: column; /* Ensure children are stacked vertically */
+  width: 70%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto; /* Center the container horizontally */
+  margin-top: 50px; /* Adjust top margin as needed */
+  align-items: center;
+  justify-content: center;
+}
+
+
+
