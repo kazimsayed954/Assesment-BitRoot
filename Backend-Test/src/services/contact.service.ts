@@ -149,7 +149,7 @@ export const uploadImageService = async (req: Request, res: Response): Promise<{
     const { id } = req.params;
     
     return new Promise((resolve, reject) => {
-        singleImageUpload(req, res, async (err: any) => {
+        singleImageUpload(req, res, async (err) => {
             if (err) {
                 logger.error('Error uploading image', { error: err.message });
                 return reject(new Error(err.message));
