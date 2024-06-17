@@ -8,10 +8,11 @@ import {
     getAllContactsController,
     uploadImageController
 } from "../controllers/contact.controller";
+import { validateContact } from "../middlewares/contact.validator";
 
 const contactRouter = express.Router();
 
-contactRouter.post('/contacts', createContactController);
+contactRouter.post('/contacts',validateContact, createContactController);
 contactRouter.put('/contacts/:id', updateContactController);
 contactRouter.delete('/contacts/:id', deleteContactController);
 contactRouter.get('/contacts/search', searchContactsController);

@@ -1,4 +1,5 @@
 import { POST } from "../../types/post.type";
+import { formatDate } from "../../utils/formatDate";
 import "./PostModal.scss";
 
 interface PostModalProps {
@@ -7,14 +8,7 @@ interface PostModalProps {
 }
 const PostModal: React.FC<PostModalProps> = ({ post, closeModal }) => {
   const { title, thumbnail, content, author, date } = post;
-  const formatDate = (timestamp: number) => {
-    const options: Intl.DateTimeFormatOptions = {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    };
-    return new Date(timestamp * 1000).toLocaleDateString(undefined, options);
-  };
+
   return (
     <div className="modal">
       <div className="modal-content">
