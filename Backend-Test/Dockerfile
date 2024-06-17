@@ -16,10 +16,10 @@ RUN pnpm install
 # Copy the rest of the application code to the working directory
 COPY . .
 
-# Compile the TypeScript code
+# Compile the TypeScript code (if applicable)
 RUN pnpm run compile
 
-# Make port 3000 available to the world outside this container
+# Make port 7899 available to the world outside this container
 EXPOSE 7899
 
 # Define the environment variables
